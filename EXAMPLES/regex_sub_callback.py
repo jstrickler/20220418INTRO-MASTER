@@ -2,6 +2,9 @@
 
 import re
 
+# r99 -> R:0099
+# M203 -> M:0302
+
 s = """lorem ipsum M302 dolor sit amet, consectetur r99 adipiscing elit, sed do
  eiusmod tempor incididunt H476 ut labore et dolore magna Q51 aliqua. Ut enim 
 ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex  

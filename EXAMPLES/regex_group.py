@@ -10,9 +10,15 @@ voluptate velit esse cillum dolore U901 eu fugiat nulla pariatur.
 Excepteur sint occaecat A-110 cupidatat non proident, sunt in H-332 culpa qui 
 officia deserunt Y-45 mollit anim id est laborum"""
 
+#   group   0----------------   no parentheses
+#   group   1------
+#   group           2--------
 pattern = r'([A-Z])-(\d{2,3})'  # <1>
 
-for m in re.finditer(pattern, s):
+#       1   2    3            4
+#  '....(...( )  ( )....).....(.....)'
+
+for m in re.finditer(pattern, s, re.I):
     print(m.group(0), m.group(1), m.group(2))  # <2>
     print(m.start(1), m.end(1), m.span())
 print()

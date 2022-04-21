@@ -10,7 +10,15 @@ voluptate velit esse cillum dolore U901 eu fugiat nulla pariatur.
 Excepteur sint occaecat A-110 cupidatat non proident, sunt in H-332 culpa qui 
 officia deserunt Y-45 mollit anim id est laborum"""
 
-rx_code = re.compile(r'[A-Z]-\d{2,3}')  # <1>
+x = (
+    "line 1"
+    "line 2"
+    "line 3"
+)
+
+print(repr(s), '\n')
+
+rx_code = re.compile(r'[A-Z]  -  \d{2,3}', re.VERBOSE | re.IGNORECASE)  # <1>
 
 if rx_code.search(s):  # <2>
     print("Found pattern.")

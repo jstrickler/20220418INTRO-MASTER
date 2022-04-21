@@ -47,3 +47,16 @@ t3 = t2 - t1
 print("datetime(2016, 8, 24, 10, 4, 34):", t1)
 print("datetime(2018, 8, 24, 22, 8, 1):", t2)
 print("time diff (t2 - t1):", t3)
+
+today = date.today()
+jay_bd = date(2014, 8, 1)
+diff = today - jay_bd
+print("diff.days: {}".format(diff.days))
+
+#      divmod(x, y)     (x // y, x % y)
+years, days = divmod(diff.days, 365)
+months = days // 30
+print(f"Jay is {years} years and {months} months old")
+
+
+

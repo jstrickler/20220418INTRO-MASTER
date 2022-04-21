@@ -10,7 +10,7 @@ voluptate velit esse cillum dolore U901 eu fugiat nulla pariatur.
 Excepteur sint occaecat A-110 cupidatat non proident, sunt in H-332 culpa qui 
 officia deserunt Y-45 mollit anim id est laborum"""
 
-pattern = r'(?P<letter>[A-Z])-(?P<number>\d{2,3})'  # <1>
+pattern = r'(?P<letter>[A-Z])-(?P<code>\d{2,3})'  # <1>
 
 for m in re.finditer(pattern, s):
-    print(m.group('letter'), m.group('number'))  # <2>
+    print(m.group('letter'), m.group('code'))  # <2>
