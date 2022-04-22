@@ -18,10 +18,14 @@ data = [  # <2>
     airports,
 ]
 
+print("BEFORE:")
+pprint(data)
+
 with open('../TEMP/pickled_data.pic', 'wb') as pic_out:  # <3>
     pickle.dump(data, pic_out)  # <4>
 
 with open('../TEMP/pickled_data.pic', 'rb') as pic_in:  # <5>
     pickled_data = pickle.load(pic_in)  # <6>
 
+print("\n\nAFTER:")
 pprint(pickled_data)  # <7>

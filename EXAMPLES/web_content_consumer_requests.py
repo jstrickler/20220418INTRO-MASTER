@@ -19,6 +19,10 @@ def main(args):
 
     if response.status_code == requests.codes.OK:  # 200?
         data = response.json()  # <4>
+        print("*** RAW DATA ***")
+        print(data)
+        print('-' * 60)
+        print('-' * 60)
         for entry in data: # <5>
             if isinstance(entry, dict):
                 meta = entry.get("meta")

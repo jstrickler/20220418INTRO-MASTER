@@ -23,17 +23,23 @@ def main():
         RECIPIENTS,
         'Here is your attachment',
         'Testing email attachments from python class at {}\n\n'.format(now),
+        cc=['mbailey4@gmail.com'],
     )
     add_text_attachment('../DATA/parrot.txt', msg)
     add_image_attachment('../DATA/felix_auto.jpeg', msg)
     send_message(smtp_server, msg)
 
 
-def create_message(sender, recipients, subject, body):
+def create_message(sender, recipients, subject, body, *, cc=None,
+                   bcc=None):
     msg = EmailMessage()  # <5>
     msg.set_content(body)  # <6>
     msg['From'] = sender
     msg['To'] = recipients
+    if cc:
+        msg['cc'] = cc
+    if bcc:
+        msg['bcc'] = bcc
     msg['Subject'] = subject
     return msg
 

@@ -6,9 +6,9 @@ data = [
     [4, 5, 6],
 ]
 
-d1 = data # <1>
-d2 = list(data) # <2>
-d3 = copy.deepcopy(data) # <3>
+d1 = data # alias
+d2 = list(data) # shallow copy
+d3 = copy.deepcopy(data) # deep copy
 
 d1.append("d1")  # <4>
 d1[0].append(50) # <5>
